@@ -45,6 +45,11 @@
 	box-sizing: border-box;
 }
 
+body {
+	margin: 0;
+	font-family: 'Oswald', sans-serif;
+}
+
 .wrapper {
 	width: 80%; /*original width was 1170px*/
 	margin: 0 auto;
@@ -232,6 +237,11 @@ figure {
 .p-t-lg {
 	padding-top: 50px;
 }
+
+.p-b-md {
+	padding-bottom: 20px;
+}
+
 .p-b-lg {
 	padding-bottom: 50px;
 }
@@ -275,18 +285,19 @@ figure {
 
 
 
-
 .col-1-6.center-block:first-child {
-	margin-top: 20px;
+
 }
+
 
 .col-1-6.center-block img {
 	display: block;
-	margin: 0 auto;
+	vertical-align: middle;
+	
 }
 
 h1 {
-	
+	text-align: center;
 	display: inline-block;
 }
 
@@ -296,23 +307,68 @@ nav ul {
 
 nav li {
 	display: inline;
+	padding-right: 50px;
 }
 
-
+nav li:last-child {
+	padding-right: 0;
+}
 
 
 
 
 
 #hero-img {
-	background-color: pink;
-	height: 300px;
+	background: url(../img/img-hero.jpg);
+	-webkit-background-size: cover;
+	-ms-background-size: cover;
+	-o-background-size: cover;
+	-moz-background-size: cover;
+	background-size: cover;
+	background-attachment:fixed;
+	margin-top: 0;
+	background-repeat: no-repeat;
+	height: 500px;
 	padding: 100px 0;
 }
+
+
+#hero-img p {
+	font-size: 2.5rem;
+	font-weight: 300;
+	letter-spacing: .2rem;
+	margin: 0;
+}
+
+#hero-img p:nth-of-type(2) {
+	font-size: 7rem;
+	font-weight: 700;
+	margin-bottom: 0;
+	line-height: 0;
+	padding-bottom: 70px;
+	border-bottom: 5px solid #000;
+	
+}
+
+#white-transparent {
+	background-color: rgba(255, 255, 255, 0.5);
+	padding: 40px;
+	
+}
+
+#hero-img span {
+	font-size: 2.3rem;
+	font-weight: 600;
+	letter-spacing: .3rem;
+	margin-top: -40px;
+}
+
 
 p {
 	display: inline-block;
 }
+
+
 
 
 .test {
@@ -372,6 +428,20 @@ section {
 	background-color: green;
 	height: 40px;
 }
+
+
+.white-txt {
+	color: #FFF;
+}
+
+
+
+
+
+
+
+
+
 
 .about-img {
 	background-color: green;
@@ -433,6 +503,57 @@ label {
 
 
 
+#sprites li {
+	padding-right: 25px;
+	display: inline;
+}
+
+#sprites li a {
+	background-position: 0 0;
+	height: 45px;
+	width: 45px;
+}
+
+#sprites li:first-child a:hover, #sprites li:nth-child(2) a:hover, #sprites li:last-child a:hover {
+	background-position: 0 -45px;
+}
+
+#sprites li:first-child a, #sprites li:nth-child(2) a, #sprites li:last-child a {
+	display: inline-block;
+}
+
+
+#sprites li:first-child a {
+	background-image: url(../img/icon-facebook.png);
+}
+
+#sprites li:nth-child(2) a {
+	background-image: url(../img/icon-twitter.png);
+}
+#sprites li:last-child a {
+	background-image: url(../img/icon-google-plus.png);
+}
+
+#contact ul {
+	padding-left: 0;
+}
+
+
+
+
+header {
+	background-color: #231F20;
+
+}
+
+
+
+
+
+
+
+
+
 
 @media screen and (max-width: 480px) {
 	
@@ -441,6 +562,10 @@ label {
   	.col-1-2, .col-1-3 {
 	  width: 100%;
   	}
+	
+	#contact .col-1-6 {
+		width: 100%;
+	}
   
   .flex {
 	

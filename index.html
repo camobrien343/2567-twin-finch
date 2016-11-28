@@ -2,6 +2,7 @@
 <html>
 <head>
 <meta name="viewport" content="width=device-width, intitial-scale=1">
+<link href="https://fonts.googleapis.com/css?family=Oswald:300,400,700" rel="stylesheet">
 <link rel="stylesheet" type="text/css" href="css/normalize.css">
 <link rel="stylesheet" type="text/css" href="css/main.css">
 <title>Twin Finch Roastery</title>
@@ -9,36 +10,38 @@
 
 <body>
 
-<header class="m-b-lg">
+<header>
 	<div class="wrapper">
         <div class="col-1-6 center-block">
             <h1>
-              <img src="img/logo-blk.png" alt="Twin Finch Roastery">
+              <img src="img/logo-white.png" alt="Twin Finch Roastery">
             </h1>
         </div>
     	<div class="col-1-3 center-block">
-        	<nav>
+        	<nav class="white-txt txt-uppercase p-b-md">
             	<ul class="txt-center">
-                	<li>Products</li>
-                    <li>About</li>
-                    <li>Contact</li>
+                	<li><a href="#">Products</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Contact</a></li>
             	</ul>
             </nav>
         </div>
     </div>
-    <div class="col-1" id="hero-img">
+    <div id="hero-img">
     	<div class="wrapper">
-        	<div class="col-1-3 center-block">
-            	<p>Our house blend was rated a 98 by coffeereview.com!"</p>
+        	<div class="col-3-5 center-block txt-uppercase" id="white-transparent">
+                <p>Our house blend<br> was rated a</p>
+                <p>98</p>
+            	<p>by coffeereview.com!"</p>
             </div>
         </div>
     </div>
 </header>
 
 <div class="wrapper">
-	<div class="col-4-7 center-block">
-    	<p>“This extraordinary coffee almost defies description with its aromatic complexity while retaining a classic clarity of structure.”<br>- Coffee Review</p>
-    </div>
+	<blockquote class="col-4-7 center-block">
+    	“This extraordinary coffee almost defies description with its aromatic complexity while retaining a classic clarity of structure.”<br>- Coffee Review
+    </blockquote>
     
     <section id="products">
       <div class="col-1-3 center-block">
@@ -50,7 +53,7 @@
       
       <div class="col-1 pink">
       	<div class="col-1-3 center-block">
-        	<h3>Featured Roasts</h3>
+        	<h3 class="txt-center">Featured Roasts</h3>
         </div>
         <div class="row">
         	<div class="col-1-2">
@@ -110,15 +113,10 @@
 
  	<div class="col-1-3 center-block">
     	<p>Need more help?</p>
-        <p>Check out the “How To Brew” Article</p>
+        <p>Check out the <a href="#">“How To Brew” Article</a></p>
     </div>
     
-    
-    
-    
-    
-    
-    
+
     <section id="about">
     	<div class="col-1-3 center-block">
           <h2 class="txt-center">About Us</h2>
@@ -157,34 +155,42 @@ roasting environment.</p>
 
 
 
-
-<div class="col-1 teal">
-	<div class="wrapper">
-        <div class="row">
-            <div class="col-1-3">
-                <p>Sign up<br> for our newsletter</p>
-            </div>
-            <div class="col-2-3 green">
-            	<div class="row">
-            		<div class="col-2-3">
-                    	<form>
-                        	<label for="email">Email:</label>
-                        	<input type="email" name="email" id="email" placeholder="Email">
-                        </form>
+<section>
+    <div class="col-1 teal">
+        <div class="wrapper">
+            <div class="row">
+                <div class="col-1-3">
+                    <p>Sign up<br> for our newsletter</p>
+                </div>
+                <div class="col-2-3 green">
+                    <div class="row">
+                        <div class="col-2-3">
+                            <form>
+                                <label for="email">Email:</label>
+                                <input type="email" name="email" id="email" placeholder="Email">
+                            </form>
+                        </div>
+                        <a href="#">Join</a>
                     </div>
-                    <a href="#">Join</a>
                 </div>
             </div>
         </div>
     </div>
-</div>
+</section>
+
 
 <div class="wrapper">
     <section id="contact">
             <div class="col-1-3 center-block">
               <h2 class="txt-center">Contact Us</h2>
           </div>
-          <div class="col-1-6 center-block blk"></div>
+          <div class="col-1-6 center-block">
+          	<ul class="txt-center" id="sprites">
+                    <li><a href="http://www.facebook.com" target="_blank"></a></li>
+                    <li><a href="http://www.twitter.com" target="_blank"></a></li>
+                    <li><a href="https://www.googleplus.com/" target="_blank"></a></li>
+                </ul>
+          </div>
           <div class="col-4-6 center-block">
           	<p>Online orders usually ship quickly and arrive within three business days. We only ship the freshest coffee and your satisfaction is guaranteed. Our rotating, featured coffees are roasted on a more limited basis and your order may be held until the next time a batch hits the roaster. We only ship whole bean, but will grind for you in-store per request.
 </p>
@@ -220,9 +226,9 @@ roasting environment.</p>
         	<div class="col-1-3">
                 <nav>
                     <ul class="txt-center">
-                        <li>Products</li>
-                        <li>About</li>
-                        <li>Contact</li>
+                        <li><a href="#">Products</a></li>
+                        <li><a href="#">About</a></li>
+                        <li><a href="#">Contact</a></li>
                     </ul>
                 </nav>
         	</div>
@@ -241,34 +247,6 @@ roasting environment.</p>
         </div>
     </div>
 </footer>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 </body>
 </html>
