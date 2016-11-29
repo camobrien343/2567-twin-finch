@@ -23,10 +23,12 @@
 5.0 - Utility
 	5.1 - Background Colors
 	5.2 - Text Colors
+	5.3 - Text Utility
 	5.3 - Text Sizes
-	5.4 - Alignments
+	5.4 - Spacing
+	5.5 - Alignments
+6.0 - Flex
 --------------------------------------------------------------*/
-
 
 /*--------------------------------------------------------------
 1.0 - TYPOGRAPHY
@@ -34,21 +36,121 @@
 
 
 
+body, blockquote footer p {
+	margin: 0;
+	font-family: 'Oswald', sans-serif;
+}
 
+/*--------------------------------------------------------------
+1.1 - Headings
+-------------------------------------------------------------- */
+h1 {
+	display: block;
+	padding-top: 20px;
+	text-align: center;
+}
+
+/*--------------------------------------------------------------
+1.2 - Body Copy
+-------------------------------------------------------------- */
+
+#hero-img p {
+	font-size: 2.5rem;
+	font-weight: 300;
+	letter-spacing: .2rem;
+	margin: 0;
+	display: inline-block;
+}
+
+#hero-img p:nth-of-type(2) {
+	font-size: 7rem;
+	font-weight: 700;
+	margin-bottom: 0;
+	line-height: 0;
+	padding-bottom: 70px;
+	border-bottom: 5px solid #000;
+	display: inline-block;
+}
+
+#hero-img p:nth-of-type(3) {
+	font-weight: 700;
+	margin-bottom: 0;
+	line-height: 3.5rem;
+	display: inline-block;
+}
+
+#hero-img span {
+	font-size: 2.3rem;
+	font-weight: 600;
+	letter-spacing: .3rem;
+	margin-top: -40px;
+	display: inline-block;
+}
+
+
+blockquote p {
+	font-family: 'Playfair Display', serif;
+	font-weight: 700;
+	font-size: 2.8rem;
+	letter-spacing: .3rem;
+	line-height: 4.4rem;
+	background-color: #FFF;
+}
+
+blockquote footer p {
+	font-size: 2.2rem;
+	font-weight: 300;
+	letter-spacing: .2rem;
+	margin-top: -40px;
+}
+
+/*--------------------------------------------------------------
+1.4 - Forms
+-------------------------------------------------------------- */
+label {
+	display: none;
+}
+
+#contact input {
+	display: block;
+}
+
+#contact label {
+	display: block;
+}
+
+/*--------------------------------------------------------------
+2.0 - Navigation Menus
+-------------------------------------------------------------- */
+
+/*--------------------------------------------------------------
+3.1 - Main Menu
+-------------------------------------------------------------- */
+
+nav ul {
+	padding-left: 0;
+}
+
+nav li {
+	display: inline;
+	padding-right: 50px;
+}
+
+nav li:last-child {
+	padding-right: 0;
+}
 
 /*--------------------------------------------------------------
 3.0 - SITE STRUCTURE
 -------------------------------------------------------------- */
+
 *, *:after, *:before {
 	-webkit-box-sizing: border-box;
 	-moz-box-sizing: border;
 	box-sizing: border-box;
 }
 
-body {
-	margin: 0;
-	font-family: 'Oswald', sans-serif;
-}
+
 
 .wrapper {
 	width: 80%; /*original width was 1170px*/
@@ -80,6 +182,64 @@ figure {
 [class*="col-"]:last-of-type {
 	float: left;
 	padding-right: 0;
+}
+
+section {
+	margin: 10px 0;
+}
+
+
+#products figure {
+	max-width: 90%;
+}
+
+#products .row {
+	margin: 20px;
+}
+
+.col-1-6.center-block img {
+	display: block;
+	vertical-align: middle;
+}
+
+#map {
+	width: 100%;
+	height: 200px;
+}
+
+#hero-img .col-3-5  {
+	margin-left:auto;
+    margin-right:auto;
+	padding-left: 100px;
+}
+
+#white-transparent {
+	background-color: rgba(255, 255, 255, 0.5);
+	padding: 40px;
+}
+
+#sprites li {
+	padding-right: 25px;
+	display: inline;
+}
+
+#sprites li a {
+	background-position: 0 0;
+	height: 45px;
+	width: 45px;
+}
+
+#sprites li:first-child a:hover, #sprites li:nth-child(2) a:hover, #sprites li:last-child a:hover {
+	background-position: 0 -45px;
+}
+
+#sprites li:first-child a, #sprites li:nth-child(2) a, #sprites li:last-child a {
+	display: inline-block;
+}
+
+
+#contact ul {
+	padding-left: 0;
 }
 
 /*--------------------------------------------------------------
@@ -206,18 +366,72 @@ figure {
 
 .col-9-12 {
 	width: 91.67%;
-	
 }
 
+/*--------------------------------------------------------------
+4.0 - Media
+-------------------------------------------------------------- */
 
+#hero-img {
+	background: url(../img/img-hero.jpg);
+	-webkit-background-size: cover;
+	-ms-background-size: cover;
+	-o-background-size: cover;
+	-moz-background-size: cover;
+	background-size: cover;
+	background-attachment:fixed;
+	margin-top: 0;
+	background-repeat: no-repeat;
+	height: 500px;
+	padding: 100px 0;
+}
 
+#sprites li:first-child a {
+	background-image: url(../img/icon-facebook.png);
+}
 
-
-
-
+#sprites li:nth-child(2) a {
+	background-image: url(../img/icon-twitter.png);
+}
+#sprites li:last-child a {
+	background-image: url(../img/icon-google-plus.png);
+}
 
 /*--------------------------------------------------------------
-5.2 - TXT UTILITY
+5.0 - Utility
+-------------------------------------------------------------- */
+
+/*--------------------------------------------------------------
+5.1 - Background Colors
+-------------------------------------------------------------- */
+
+
+.lt-blue-bg {
+	background-color: #C5D8D8;
+}
+
+.drk-gry-bg {
+	background-color: #231F20;
+}
+
+/*--------------------------------------------------------------
+5.2 - Text Colors
+-------------------------------------------------------------- */
+
+.white-txt {
+	color: #FFF;
+}
+
+.drk-gry-txt {
+	color: #414042;
+}
+
+.md-gry-txt {
+	color: #A6A8AB;
+}
+
+/*--------------------------------------------------------------
+5.3 - TEXT UTILITY
 -------------------------------------------------------------- */
 .txt-uppercase {
 	text-transform:uppercase;
@@ -226,7 +440,7 @@ figure {
 	text-align: center;
 }
 /*--------------------------------------------------------------
-5.3 - SPACING
+5.4 - SPACING
 -------------------------------------------------------------- */
 .p-t-sm {
 	padding-top: 10px;
@@ -263,7 +477,7 @@ figure {
 	margin-bottom: 50px;
 }
 /*--------------------------------------------------------------
-5.4 - ALIGNMENTS
+5.5 - ALIGNMENTS
 -------------------------------------------------------------- */
 
 .center-block {
@@ -275,120 +489,12 @@ figure {
 	float: right !important;
 }
 
-
-
-
-
-
-
-
-
-
-
-.col-1-6.center-block:first-child {
-
+ #about .col-1-2:first-child {
+	float:left; 
 }
-
-
-.col-1-6.center-block img {
-	display: block;
-	vertical-align: middle;
-	
-}
-
-h1 {
-	text-align: center;
-	display: inline-block;
-}
-
-nav ul {
-	padding-left: 0;
-}
-
-nav li {
-	display: inline;
-	padding-right: 50px;
-}
-
-nav li:last-child {
-	padding-right: 0;
-}
-
-
-
-
-
-#hero-img {
-	background: url(../img/img-hero.jpg);
-	-webkit-background-size: cover;
-	-ms-background-size: cover;
-	-o-background-size: cover;
-	-moz-background-size: cover;
-	background-size: cover;
-	background-attachment:fixed;
-	margin-top: 0;
-	background-repeat: no-repeat;
-	height: 500px;
-	padding: 100px 0;
-}
-
-
-#hero-img p {
-	font-size: 2.5rem;
-	font-weight: 300;
-	letter-spacing: .2rem;
-	margin: 0;
-}
-
-#hero-img p:nth-of-type(2) {
-	font-size: 7rem;
-	font-weight: 700;
-	margin-bottom: 0;
-	line-height: 0;
-	padding-bottom: 70px;
-	border-bottom: 5px solid #000;
-	
-}
-
-#white-transparent {
-	background-color: rgba(255, 255, 255, 0.5);
-	padding: 40px;
-	
-}
-
-#hero-img span {
-	font-size: 2.3rem;
-	font-weight: 600;
-	letter-spacing: .3rem;
-	margin-top: -40px;
-}
-
-
-p {
-	display: inline-block;
-}
-
-
-
-
-.test {
-	width: 100%;
-	height: 100px;
-	background-color: teal;
-}
-
-
-
-
-footer {
-	background-color: pink;
-	
-}
-
-
-
-section {
-	margin: 10px 0;
+	 
+#about col-1-2:nth-child(2) {
+	float: right;
 }
 
 
@@ -399,40 +505,6 @@ section {
 
 
 
-
-
-
-
-.blk {
-	background-color: #000;
-	height: 40px;
-}
-
-.pink {
-	background-color: pink;
-
-}
-
-.teal {
-	background-color: teal;
-	height: 100px;
-}
-
-
-.blue {
-	background-color: blue;
-	height: 40px;
-}
-
-.green {
-	background-color: green;
-	height: 40px;
-}
-
-
-.white-txt {
-	color: #FFF;
-}
 
 
 
@@ -446,8 +518,23 @@ section {
 .about-img {
 	background-color: green;
 	height: 40px;
-
 }
+
+
+footer {
+	background-color: pink;
+	
+}
+
+
+
+
+
+
+
+/*--------------------------------------------------------------
+6.0 - Flex
+-------------------------------------------------------------- */
 
 .flex {
 	display: -webkit-box;
@@ -455,105 +542,10 @@ section {
     display: -ms-flexbox;
     display: -webkit-flex;
     display: flex;
-
     -webkit-flex-direction: row;
     -ms-flex-direction: row;
     flex-direction: row;
-  
 }
-
-  #about .col-1-2:first-child {
-float:left;
-	 }
-	 
-	 
-#about col-1-2:nth-child(2) {
-float: right;
-		}
-		
-
-label {
-	display: none;
-}
-
-
-#contact input {
-	display: block;
-}
-
-
-
-
-
-
-
-
-
-
-
-
-#contact label {
-	display: block;
-}
-
-.f-right {
-	float: right!important;
-}
-
-
-
-
-#sprites li {
-	padding-right: 25px;
-	display: inline;
-}
-
-#sprites li a {
-	background-position: 0 0;
-	height: 45px;
-	width: 45px;
-}
-
-#sprites li:first-child a:hover, #sprites li:nth-child(2) a:hover, #sprites li:last-child a:hover {
-	background-position: 0 -45px;
-}
-
-#sprites li:first-child a, #sprites li:nth-child(2) a, #sprites li:last-child a {
-	display: inline-block;
-}
-
-
-#sprites li:first-child a {
-	background-image: url(../img/icon-facebook.png);
-}
-
-#sprites li:nth-child(2) a {
-	background-image: url(../img/icon-twitter.png);
-}
-#sprites li:last-child a {
-	background-image: url(../img/icon-google-plus.png);
-}
-
-#contact ul {
-	padding-left: 0;
-}
-
-
-
-
-header {
-	background-color: #231F20;
-
-}
-
-
-
-
-
-
-
-
-
 
 @media screen and (max-width: 480px) {
 	

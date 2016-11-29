@@ -3,20 +3,31 @@
 <head>
 <meta name="viewport" content="width=device-width, intitial-scale=1">
 <link href="https://fonts.googleapis.com/css?family=Oswald:300,400,700" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Playfair+Display:400,700,900" rel="stylesheet">
 <link rel="stylesheet" type="text/css" href="css/normalize.css">
 <link rel="stylesheet" type="text/css" href="css/main.css">
+<script src="https://maps.googleapis.com/maps/api/js"></script>
+<script>
+  function initialize() {
+	var mapCanvas = document.getElementById('map');
+	var mapOptions = {
+	  center: new google.maps.LatLng(45.5231, -122.6765),
+	  zoom: 8,
+	  mapTypeId: google.maps.MapTypeId.ROADMAP
+	}
+	var map = new google.maps.Map(mapCanvas, mapOptions)
+  }
+  google.maps.event.addDomListener(window, 'load', initialize);
+</script>
 <title>Twin Finch Roastery</title>
 </head>
-
 <body>
-
-<header>
+<header class="drk-gry-bg">
 	<div class="wrapper">
-        <div class="col-1-6 center-block">
-            <h1>
+            <h1 class="center-block">
               <img src="img/logo-white.png" alt="Twin Finch Roastery">
             </h1>
-        </div>
+        
     	<div class="col-1-3 center-block">
         	<nav class="white-txt txt-uppercase p-b-md">
             	<ul class="txt-center">
@@ -38,159 +49,158 @@
     </div>
 </header>
 
-<div class="wrapper">
-	<blockquote class="col-4-7 center-block">
-    	“This extraordinary coffee almost defies description with its aromatic complexity while retaining a classic clarity of structure.”<br>- Coffee Review
-    </blockquote>
-    
-    <section id="products">
-      <div class="col-1-3 center-block">
-          <h2 class="txt-center">Products</h2>
-      </div>
-      <div class="col-4-6 center-block">
-      	<p>We have a constantly evolving, hand picked selection of fine coffee origins and delicious blends engineered to help you brew a cafe-quality cup at home.</p>
-      </div>
-      
-      <div class="col-1 pink">
-      	<div class="col-1-3 center-block">
-        	<h3 class="txt-center">Featured Roasts</h3>
-        </div>
-        <div class="row">
-        	<div class="col-1-2">
-            	<div class="col-1-2 test"></div>
-                <p>Roast: Light  |  Origin: La Chiapas, Mexico</p>
-            	<p>1lb $17.95</p>
-                <h4>Sunrise</h4>
-                <p>Light, fruity acidity which complements its fully nutty body and unique spicy tones.</p>
-                <a href="#">Buy</a>
-            </div>
-            <div class="col-1-2">
-            <div class="col-1-2 test"></div>
-                <p>Roast: Medium  |  Origin: Cajamarca & Moyobamba Regions, Peru</p>
-            	<p>1lb $17.95</p>
-                <h4>Finch House Blend</h4>
-                <p>Hint of citrus, complemented by flavors of dark chocolate, peanut and light pepper notes.</p>
-                <a href="#">Buy</a>
-            </div>
-        </div>
-      </div>
-    
-    
-    
-      <div class="col-1-3 center-block">
-      	<h3 class="txt-center">Our Other Roasts</h3>
-      </div>
-      
-      <div class="row">
-      	<div class="col-1-3">
-        	<div class="col-1-3 test"></div>
-                <p>Roast: Medium-Dark  |  Origin: Eastern Java, Indonesia</p>
-            	<p>1lb $19.95</p>
-                <h4>Evening Oak</h4>
-                <p>Our featured roast of the season. Pungently rich and complex with hints of night-blooming flowers and coriander in aroma and cup.</p>
-                <a href="#">Buy</a>
-        </div>
-      	<div class="col-1-3">
-        	<div class="col-1-2 test"></div>
-                <p>Roast: Dark  |  Origin: Latin America</p>
-            	<p>1lb $17.95</p>
-                <h4>Midnight</h4>
-                <p>Roasted into second crack for a big, bold and dark cup. Beans display oil. </p>
-                <a href="#">Buy</a>
-        </div>
-      	<div class="col-1-3">
-        	<div class="col-1-2 test"></div>
-                <p>Origin: Latin America, Africa, Indonesia</p>
-            	<p>1lb $19.95</p>
-                <h4>Espresso</h4>
-                <p>Clean, a little roasty, sumptuous crema, unfussy, delicious.</p>
-                <a href="#">Buy</a>
-        </div>
-      </div>
-    </section>  
-     
-	
-
- 	<div class="col-1-3 center-block">
-    	<p>Need more help?</p>
-        <p>Check out the <a href="#">“How To Brew” Article</a></p>
+<blockquote class="col-4-7 center-block txt-center">
+	<div class="wrapper">
+    	<p class="drk-gry-txt">“This extraordinary coffee almost defies description with its aromatic complexity while retaining a classic clarity of structure.”</p>
+    	<footer>
+        	<p class="md-gry-txt txt-uppercase">- Coffee Review</p>
+   		</footer>
+     </div> 
+</blockquote>
+  
+<section id="products">
+  <div class="center-block drk-gry-bg">
+    <div class="wrapper">
+        <h2 class="txt-center">Products</h2>
+    	<p>We have a constantly evolving, hand picked selection of fine coffee origins and delicious blends engineered to help you brew a cafe-quality cup at home.</p>
     </div>
-    
-
-    <section id="about">
-    	<div class="col-1-3 center-block">
-          <h2 class="txt-center">About Us</h2>
-      </div>
-      <div class="row flex">
-      	<div class="col-1-2 about-img"></div>
+  </div>
+   
+          
+  <div class="wrapper lt-blue-bg txt-center">
+    <h3>Featured Roasts</h3>
+    <div class="row">
         <div class="col-1-2">
-        	<p>Our coffee is roasted in a hot air, refractory
+            <figure>
+                <img src="img/img-product.jpg" alt="">
+            </figure>
+            <p>Roast: Light  |  Origin: La Chiapas, Mexico</p>
+            <p>1lb $17.95</p>
+            <h4>Sunrise</h4>
+            <p>Light, fruity acidity which complements its fully nutty body and unique spicy tones.</p>
+            <a href="#">Buy</a>
+        </div>
+        <div class="col-1-2">
+        	<figure>
+                <img src="img/img-product.jpg" alt="">
+            </figure>
+            <p>Roast: Medium  |  Origin: Cajamarca & Moyobamba Regions, Peru</p>
+            <p>1lb $17.95</p>
+            <h4>Finch House Blend</h4>
+            <p>Hint of citrus, complemented by flavors of dark chocolate, peanut and light pepper notes.</p>
+            <a href="#">Buy</a>
+        </div>
+   </div>
+</div>
+
+<div class="wrapper">    
+    <h3 class="txt-center">Our Other Roasts</h3>
+    <div class="row">
+      <div class="col-1-3">
+          <figure>
+                <img src="img/img-product.jpg" alt="">
+            </figure>
+          <p>Roast: Medium-Dark  |  Origin: Eastern Java, Indonesia</p>
+          <p>1lb $19.95</p>
+          <h4>Evening Oak</h4>
+          <p>Our featured roast of the season. Pungently rich and complex with hints of night-blooming flowers and coriander in aroma and cup.</p>
+          <a href="#">Buy</a>
+      </div>
+      
+      <div class="col-1-3">
+          <figure>
+                <img src="img/img-product.jpg" alt="">
+            </figure>
+          <p>Roast: Dark  |  Origin: Latin America</p>
+          <p>1lb $17.95</p>
+          <h4>Midnight</h4>
+          <p>Roasted into second crack for a big, bold and dark cup. Beans display oil. </p>
+          <a href="#">Buy</a>
+      </div>
+      
+      <div class="col-1-3">
+          <figure>
+                <img src="img/img-product.jpg" alt="">
+            </figure>
+          <p>Origin: Latin America, Africa, Indonesia</p>
+          <p>1lb $19.95</p>
+          <h4>Espresso</h4>
+          <p>Clean, a little roasty, sumptuous crema, unfussy, delicious.</p>
+          <a href="#">Buy</a>
+      </div>
+      
+    </div> <!-- Row closed -->
+    
+ 
+ 	
+    <p class="txt-center">Need more help?</p>
+    <p class="txt-center">Check out the <a href="#">“How To Brew” Article</a></p>
+    
+    
+  </div>  
+</section>  
+    
+<section class="wrapper" id="about">
+  <h2 class="txt-center">About Us</h2>
+  <div class="row flex">
+    <div class="col-1-2 about-img"></div>
+    <div class="col-1-2">
+        <p>Our coffee is roasted in a hot air, refractory
 lined roaster with an extraordinary level of
 control. The significance of relying on a high
 volume of hot air to roast coffee beans can't
 be understated.</p>
-        </div>
-      </div>
-      <div class="row">
-      	<div class="col-1-2 f-up">
-        	<p>Most small coffee roasters use a single stage
+    </div>
+  </div>
+  <div class="row">
+     <div class="col-1-2 f-up">
+       <p>Most small coffee roasters use a single stage
 burner which offers virtually no control during
 the roasting process. The refractory significantly
 reduces hot spots which can damage
 coffee beans and produces a much more even
 roasting environment.</p>
-        </div>
-        <div class="col-1-2 about-img"></div>
       </div>
-    </section>
-</div>
+      <div class="col-1-2 about-img"></div>
+  </div>
+</section>
 
 
-
-
-
-
-
-
-
-
-
-<section>
-    <div class="col-1 teal">
-        <div class="wrapper">
-            <div class="row">
-                <div class="col-1-3">
-                    <p>Sign up<br> for our newsletter</p>
-                </div>
-                <div class="col-2-3 green">
-                    <div class="row">
-                        <div class="col-2-3">
-                            <form>
-                                <label for="email">Email:</label>
-                                <input type="email" name="email" id="email" placeholder="Email">
-                            </form>
-                        </div>
-                        <a href="#">Join</a>
+<div class="col-1 drk-gry-bg">
+    <div class="wrapper">
+        <div class="row">
+            <div class="col-1-3">
+                <p>Sign up<br> for our newsletter</p>
+            </div>
+            <div class="col-2-3 green">
+                <div class="row">
+                    <div class="col-2-3">
+                        <form>
+                            <label for="email">Email:</label>
+                            <input type="email" name="email" id="email" placeholder="Email">
+                        </form>
                     </div>
+                    <a href="#">Join</a>
                 </div>
             </div>
         </div>
     </div>
-</section>
+</div>
+
 
 
 <div class="wrapper">
     <section id="contact">
-            <div class="col-1-3 center-block">
+            
               <h2 class="txt-center">Contact Us</h2>
-          </div>
-          <div class="col-1-6 center-block">
+          
+          
           	<ul class="txt-center" id="sprites">
                     <li><a href="http://www.facebook.com" target="_blank"></a></li>
                     <li><a href="http://www.twitter.com" target="_blank"></a></li>
                     <li><a href="https://www.googleplus.com/" target="_blank"></a></li>
                 </ul>
-          </div>
+          
           <div class="col-4-6 center-block">
           	<p>Online orders usually ship quickly and arrive within three business days. We only ship the freshest coffee and your satisfaction is guaranteed. Our rotating, featured coffees are roasted on a more limited basis and your order may be held until the next time a batch hits the roaster. We only ship whole bean, but will grind for you in-store per request.
 </p>
@@ -198,7 +208,17 @@ roasting environment.</p>
           
           <div class="row">
             <div class="col-1-2">
-            	<div class="col-1 green"></div>
+            	<div id="map">
+                	<script type="text/javascript">
+					  $(function() {
+						$("#map").googleMap({
+						  zoom: 10, // Initial zoom level (optional)
+						  coords: [48.895651, 2.290569], // Map center (optional)
+						  type: "ROADMAP" // Map type (optional)
+						});
+					  })
+					</script>
+                </div>
                 <p>You can buy from us directly at our Portland storefront located at 457 NW Market Street.</p>
             </div>
             <div class="col-1-2">
@@ -206,8 +226,8 @@ roasting environment.</p>
                 	<label for="fname">Name</label>
                     <input type="text" name="first-name" id="fname">
                     
-                    <label for="user-email">Email</label>
-                    <input type="user-email" name="user-email" id="user-email">
+                    <label for="email-address">Email</label>
+                    <input type="email" name="email-address" id="email-address">
                     
                     <p class="bold">Message</p>
                 	<textarea rows="5" cols="55"></textarea>
@@ -233,20 +253,21 @@ roasting environment.</p>
                 </nav>
         	</div>
             
-           <div class="col-1-3 f-right">
+           <div class="col-1-3 push-right">
                 <div class="col-1-3">
                     <p>Twin Finch<br>457 NW Market Street</p>
                 </div>
                 <div class="col-1-3">
-                    <h1 class="f-right">
+                    <h1 class="push-right">
                         <img src="img/logo-blk.png" alt="Twin Finch Roastery">
                     </h1>
                 </div>
            </div>
-           
         </div>
     </div>
 </footer>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script> 
 
 </body>
 </html>
