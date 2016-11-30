@@ -16,9 +16,8 @@
 	3.2 - Sub Menu
 	3.3 - Footer Menu
 3.0 - Content
-	3.1 - Site Structure
-	3.2 - Section Name
-	3.3 - Section Name
+	3.1 - Single Column
+	3.2 - Partial Columns
 4.0 - Media
 5.0 - Utility
 	5.1 - Background Colors
@@ -37,7 +36,7 @@
 
 
 body, blockquote footer p {
-	margin: 0;
+	
 	font-family: 'Oswald', sans-serif;
 }
 
@@ -49,6 +48,16 @@ h1 {
 	padding-top: 20px;
 	text-align: center;
 }
+
+h2 {
+	border-bottom: 2px solid #000;
+	text-align: center;
+	display: inline-block;
+}
+
+#products h2 {
+	border-bottom: 2px solid #FFF;
+	}
 
 /*--------------------------------------------------------------
 1.2 - Body Copy
@@ -104,6 +113,21 @@ blockquote footer p {
 	margin-top: -40px;
 }
 
+address {
+	font-style: normal;
+}
+
+/*--------------------------------------------------------------
+1.3 - Buttons
+-------------------------------------------------------------- */
+
+#products .row a, #newsletter a {
+	background-color: #231F20;
+	color: #D0D2D3;
+	padding: 10px 30px;
+	text-decoration: none;
+}
+
 /*--------------------------------------------------------------
 1.4 - Forms
 -------------------------------------------------------------- */
@@ -117,6 +141,15 @@ label {
 
 #contact label {
 	display: block;
+}
+
+#newsletter input {
+	width: 90%;
+	margin-top: 20px;
+}
+
+textarea, #contact input {
+	width: 100%;
 }
 
 /*--------------------------------------------------------------
@@ -237,9 +270,12 @@ section {
 	display: inline-block;
 }
 
-
 #contact ul {
 	padding-left: 0;
+}
+
+.about-img:first-of-type {
+	margin-right: 20px;
 }
 
 /*--------------------------------------------------------------
@@ -257,41 +293,6 @@ section {
 	width: 33.33%;
 }
 
-.col-1-4 {
-	width: 25%;
-}
-
-.col-1-5 {
-	width: 20%;
-}
-
-.col-1-6 {
-	width: 16.66%;
-}
-
-.col-1-7 {
-	width: 14.28%
-}
-
-.col-1-8 {
-	width: 12.5%;
-}
-
-.col-1-9 {
-	width: 11.11%;
-}
-
-.col-1-10 {
-	width: 10%;
-}
-
-.col-1-11 {
-	width: 9.09%;
-}
-
-.col-1-12 {
-	width: 8.33%;
-}
 /*--------------------------------------------------------------
 3.2 - PARTIAL COLUMNS
 -------------------------------------------------------------- */
@@ -300,72 +301,12 @@ section {
 	width: 66.66%;
 }
 
-.col-3-4 {
-	width: 75%;
-}
-
-.col-2-5 {
-	width: 40%;
-}
-
 .col-3-5 {
 	width: 60%;
 }
 
-.col-2-6 {
-	width: 16.66%;
-}
-
 .col-4-6 {
 	width: 83.33%;
-}
-
-.col-3-7 {
-	width: 14.28%;
-}
-
-.col-4-7 {
-	width: 85.7%;
-}
-
-.col-3-8 {
-	width: 37.5%;
-}
-
-.col-5-8 {
-	width: 62.5%;
-}
-
-.col-3-9 {
-	width: 11.11%;
-}
-
-.col-6-9 {
-	width: 88.88%; 
-}
-
-.col-4-10 {
-	width: 40%;
-}
-
-.col-6-10 {
-	width: 60%;
-}
-
-.col-9-11 {
-	width: 81.81%;
-}
-
-.col-2-11 {
-	width: 18.18%;
-}
-
-.col-3-12 {
-	width: 8.33%;
-}
-
-.col-9-12 {
-	width: 91.67%;
 }
 
 /*--------------------------------------------------------------
@@ -439,6 +380,11 @@ section {
 .txt-center {
 	text-align: center;
 }
+
+.txt-lft {
+	text-align: left;
+}
+
 /*--------------------------------------------------------------
 5.4 - SPACING
 -------------------------------------------------------------- */
@@ -497,41 +443,6 @@ section {
 	float: right;
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-.about-img {
-	background-color: green;
-	height: 40px;
-}
-
-
-footer {
-	background-color: pink;
-	
-}
-
-
-
-
-
-
-
 /*--------------------------------------------------------------
 6.0 - Flex
 -------------------------------------------------------------- */
@@ -542,52 +453,108 @@ footer {
     display: -ms-flexbox;
     display: -webkit-flex;
     display: flex;
+	-moz-flex-direction: row;
+    -o-flex-direction: row;
     -webkit-flex-direction: row;
     -ms-flex-direction: row;
     flex-direction: row;
 }
 
+.about-info {
+	display: flex;
+    justify-content:center;
+    align-content:center;
+    flex-direction:column;
+}
+
 @media screen and (max-width: 480px) {
 	
+/*--------------------------------------------------------------
+1.2 - Body Copy
+-------------------------------------------------------------- */
+
+	#hero-img p {
+		font-size: 1.4rem;
+		letter-spacing: .1rem;
+	}
+  
+	#hero-img p:nth-of-type(2) {
+		font-size: 3.5rem;
+	}
 	
+	#hero-img p:nth-of-type(3) {
+		font-size: 1.2rem;
+	}
 	
+	#hero-img span {
+		font-size: 2.3rem;
+	}
+		
+	#hero-img .col-3-5  {
+	padding-left: 0;
+  	}
+	
+	#hero-img .col-3-5 {
+		width: 100%;
+	}
+	  
+/*--------------------------------------------------------------
+1.2 - Body Copy
+-------------------------------------------------------------- */
+	
+/*--------------------------------------------------------------
+3.1 - Single Column
+-------------------------------------------------------------- */
   	.col-1-2, .col-1-3 {
 	  width: 100%;
   	}
 	
-	#contact .col-1-6 {
-		width: 100%;
+
+/*--------------------------------------------------------------
+3.0 - SITE STRUCTURE
+-------------------------------------------------------------- */
+
+	#about .about-img:last-child {
+		display: none;
 	}
+	
+/*--------------------------------------------------------------
+6.0 - Flex
+-------------------------------------------------------------- */
   
   .flex {
-	
+	-moz-flex-direction: column;
+	-o-flex-direction: column;
     -webkit-flex-direction: column;
     -ms-flex-direction: column;
     flex-direction: column;
-  
-}
+	}
   
   
   .flex .col-1-2:first-child {
 	-webkit-box-ordinal-group: 2;
     -moz-box-ordinal-group: 2;
+	-ms-box-ordinal-group: 2;
+	-o-box-ordinal-group: 2;
     -ms-flex-order: 2;
-    -webkit-order: 2;
+    -moz-order: 2;
+	-o-order: 2;
+	-webkit-order: 2;
     order: 2;
 	 }
-	 
 	 
 	 .flex .col-1-2:last-child {
 	-webkit-box-ordinal-group: 1;
     -moz-box-ordinal-group: 1;
+	-ms-box-ordinal-group: 1;
+	-o-box-ordinal-group: 1;
     -ms-flex-order: 1;
     -webkit-order: 1;
+	-moz-order: 1;
+	-o-order: 1;
     order: 1;
 		}
 		
-		
-	#about .about-img:last-child {
-		display: none;
-	}
+	
 
 }
