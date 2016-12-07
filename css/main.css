@@ -46,7 +46,6 @@ body, blockquote footer p {
 -------------------------------------------------------------- */
 h1 {
 	padding-top: 20px;
-	margin-top: 0;
 }
 
 h2 {
@@ -74,7 +73,7 @@ h4 {
 	
 .lt-blue-bg.txt-center.p-b-lg h4 {
 	background-color: #000;
-	margin: 0 60px;
+	margin: 0 150px;
 	padding: 10px 30px;
 }
 
@@ -131,7 +130,24 @@ h2 + p:first-child {
 
 #products p {
 	font-weight: 300;
-	
+}
+
+footer p {
+	display: inline-block;
+	text-align: right;
+	padding-right: 20px;
+	font-size: 1rem;
+}
+
+#newsletter span {
+	font-size: 2rem;
+	font-weight: 700;
+}
+
+#products p.txt-center.txt-uppercase {
+	font-size: 1.2rem;
+	font-weight: 700;
+	letter-spacing: .2rem;
 }
 
 
@@ -147,7 +163,6 @@ a {
 	background-color: #231F20;
 	color: #D0D2D3;
 	padding: 10px 70px;
-   
 }
 
 #products a:hover, #contact form a:hover {
@@ -157,11 +172,9 @@ a {
 
 #products a:active, #contact form a:active {
 	background-color: #FFF;
-	color: #231F20;
 	border: 1px solid #231F20;
+	color: #231F20;
 }
-
-
 
 p[class~="txt-lft"] a {
 	border: none;
@@ -173,15 +186,15 @@ p[class~="txt-lft"] a:visited {
 }
 
 #hero-img a[href="#products"] {
-	padding: 10px 30px;
 	border: 1px solid #231F20;
 	color: #231F20;
+	padding: 10px 30px;
 }
 
 #hero-img a:last-child:hover {
 	background-color: #A6A8AB;
-	color: #231F20;
 	border: 1px solid #231F20;
+	color: #231F20;
 }
 
 #hero-img a:last-child:active {
@@ -189,15 +202,13 @@ p[class~="txt-lft"] a:visited {
 	color: #FFF;
 }
 
-
-
 #newsletter a {
 	background-color: #A6A8AB;
 	color: #231F20;
-	padding: 9px 75px;
 	display: inline-block;
 	margin-right: 10px;
 	margin-left: -20px;
+	padding: 9px 75px;
 }
 
 #newsletter a:hover {
@@ -214,13 +225,17 @@ label {
 }
 
 #newsletter input {
-	width: 80%;
 	height: 50px;
-	
+	width: 75%;
 }
 
 textarea, #contact input {
 	width: 100%;
+}
+
+#newsletter form {
+	margin-right: 50px;
+	margin-top: -100px;
 }
 
 /*--------------------------------------------------------------
@@ -325,13 +340,9 @@ figure {
 	margin: 0 auto;
 }
 
-
-
-
 #white-transparent {
 	background-color: rgba(255, 255, 255, 0.5);
 	padding: 60px 80px;
-	margin: 150px 0;
 }
 
 #sprites li {
@@ -348,13 +359,12 @@ figure {
 	background-position: 0 -45px;
 }
 
-#sprites li:first-child a, #sprites li:nth-child(2) a, #sprites li:last-child a, #hero-img span, #hero-img p:nth-of-type(2), #hero-img p:nth-of-type(3), #hero-img p, h2 {
+#newsletter p, #sprites li:first-child a, #sprites li:nth-child(2) a, #sprites li:last-child a, #hero-img span, #hero-img p:nth-of-type(2), #hero-img p:nth-of-type(3), #hero-img p, h2 {
 	display: inline-block;
 }
 
 nav li, #sprites li {
 	display: inline;
-
 }
 
 .col-1-6.center-block img, #contact label, #contact input, .lt-blue-bg.txt-center.p-b-lg h4, #newsletter p, h1 {
@@ -365,7 +375,7 @@ nav li, #sprites li {
 	padding-left: 0;
 }
 
-.about-img:first-of-type {
+.about-img:first-of-type, .col-1-2.about-info.txt-lft {
 	margin-right: 20px;
 }
 
@@ -373,10 +383,25 @@ nav li, #sprites li {
 	margin: 30px 0;
 }
 
-
-
 #newsletter p {
 	margin-right: 50px;
+}
+
+footer {
+	padding: 20px 0;
+}
+
+#newsletter {
+	padding: 20px 80px;
+}
+
+#products .col-1-3 {
+	margin-right: 40px;
+}
+
+
+#products .col-1-3:last-child {
+	margin-right: 0;
 }
 
 
@@ -426,7 +451,7 @@ nav li, #sprites li {
 	background-attachment:fixed;
 	margin-top: 0;
 	background-repeat: no-repeat;
-	padding: 100px 0;
+	padding: 150px 0;
 }
 
 #sprites li:first-child a {
@@ -565,13 +590,10 @@ nav li, #sprites li {
     flex-direction: row;
 }
 
-	
 	.flex[class*="col-"] {
 	flex: 1;
 }
 	
-
-
 .about-info {
 	display: flex;
     justify-content:center;
@@ -579,78 +601,20 @@ nav li, #sprites li {
     flex-direction:column;
 }
 
-footer p {
-	display: inline-block;
-	text-align: right;
-	padding-right: 20px;
-	font-size: 1rem;
+
+
+
+
+
+
+
+#contact p:first-child, #contact, #about {
+	margin-bottom: 70px;
 }
 
-footer {
-	padding: 20px 0;
+footer .row .col-1-3:last-of-type {
+	float: right;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-#newsletter {
-	padding: 20px 80px;
-}
-
-
-#newsletter p {
-	display: inline-block;
-}
-
-#newsletter span {
-	font-size: 2rem;
-	font-weight: 700;
-}
-
-
-#newsletter form {
-	margin-right: 50px;
-	margin-top: 30px;
-}
-
-
-#products .col-1-3 {
-	margin-right: 40px;
-}
-
-
-#products .col-1-3:last-child {
-	margin-right: 0;
-}
-
-
-
 
 @media screen and (max-width: 480px) {
 	
@@ -681,6 +645,12 @@ footer {
 		  font-size: 1.2rem;
 		  letter-spacing: .2rem;
 	  }
+	  
+	  .lt-blue-bg.txt-center.p-b-lg h4 {
+		  background-color: #000;
+		  margin: 0 10px;
+		  padding: 10px 30px;
+	}
 	  
   
 	  #hero-img p {
@@ -745,7 +715,6 @@ footer {
 	blockquote footer p {
 	font-size: 1.8rem;
 	letter-spacing: .1rem;
-	margin-top: 0;
 	}
 	  
 	#newsletter p {
@@ -786,21 +755,13 @@ footer {
 	width: 80%;
 	height: 50px;
 	float: left;
-	
 	}	
 	
-	
 	#newsletter form {
-	margin-top: 0;
 	margin-right: 0;
+	margin-top: 0;
 	padding-bottom: 20px;
-	
-	}
-	
-/*--------------------------------------------------------------
-1.5 - Lists
--------------------------------------------------------------- */
-	 
+	} 
 	
 /*--------------------------------------------------------------
 2.0 - Navigation Menus
