@@ -135,8 +135,11 @@ h2 + p:first-child {
 footer p {
 	display: inline-block;
 	text-align: right;
-	padding-right: 20px;
 	font-size: 1rem;
+}
+
+footer img {
+	margin-left: 30px;
 }
 
 #newsletter span {
@@ -234,8 +237,7 @@ textarea, #contact input {
 }
 
 #newsletter form {
-	margin-right: 50px;
-	margin-top: -100px;
+	margin-top: -40px;
 }
 
 /*--------------------------------------------------------------
@@ -280,6 +282,10 @@ nav a:active {
 	-webkit-box-sizing: border-box;
 	-moz-box-sizing: border;
 	box-sizing: border-box;
+}
+
+#newsletter p:last-of-type {
+	display: inline;
 }
 
 .wrapper, figure, #hero-img p:first-of-type, .center-block, #hero-img .col-1-3 {
@@ -557,21 +563,14 @@ footer {
 	float: none !important;
 }
 
-.push-right {
+.push-right, #about col-1-2:nth-child(2) {
 	float: right !important;
 }
 
-.push-left: {
+.push-left, #about .col-1-2:first-child  {
 	float: left;
 }
-
- #about .col-1-2:first-child {
-	float:left; 
-}
-	 
-#about col-1-2:nth-child(2) {
-	float: right;
-}
+ 
 
 /*--------------------------------------------------------------
 6.0 - Flex
@@ -608,6 +607,15 @@ footer {
 
 
 
+
+
+
+
+
+
+
+
+
 #contact p:first-child, #contact, #about {
 	margin-bottom: 70px;
 }
@@ -616,152 +624,153 @@ footer .row .col-1-3:last-of-type {
 	float: right;
 }
 
+
+
+
+
+
+
 @media screen and (max-width: 480px) {
 	
 /*--------------------------------------------------------------
 1.0 - Typography
 -------------------------------------------------------------- */
 
-	body {
-		font-size: 1.1rem;
-	}
+  body {
+	  font-size: 1.1rem;
+  }
 	
 /*--------------------------------------------------------------
 1.1 - Headings
 -------------------------------------------------------------- */
 
-	  h2 {
-	 	 font-size: 2.2rem;
-	  	letter-spacing: .2rem;
-	  }
-	  
-	  h3 {
-		  font-size: 1.5rem;
-		  font-weight: 300;
-		  letter-spacing: .2rem;
-	  }
-	  
-		h4 {
-		  font-size: 1.2rem;
-		  letter-spacing: .2rem;
-	  }
-	  
-	  .lt-blue-bg.txt-center.p-b-lg h4 {
-		  background-color: #000;
-		  margin: 0 10px;
-		  padding: 10px 30px;
-	}
-	  
+  h2 {
+	  font-size: 2.2rem;
+	  letter-spacing: .2rem;
+  }
   
-	  #hero-img p {
-		  font-size: 1.4rem;
-		  letter-spacing: .1rem;
-	  }
-	
-	  #hero-img p:nth-of-type(2) {
-		  font-size: 3.5rem;
-	  }
+  h3 {
+	  font-size: 1.5rem;
+	  font-weight: 300;
+	  letter-spacing: .2rem;
+  }
+  
+	h4 {
+	  font-size: 1.2rem;
+	  letter-spacing: .2rem;
+  }
+  
+  .lt-blue-bg.txt-center.p-b-lg h4 {
+	  background-color: #000;
+	  margin: 0 10px;
+	  padding: 10px 30px;
+  }
+
+  #hero-img p {
+	  font-size: 1.4rem;
+	  letter-spacing: .1rem;
+  }
+
+  #hero-img p:nth-of-type(2) {
+	  font-size: 3.5rem;
+  }
+  
+  [class~="txt-lft"] a {
+	  font-size: 1.3rem;
+  }
+  
+  #hero-img span {
+	  font-size: 2.3rem;
+  }
 	  
-	  [class~="txt-lft"] a {
-		  font-size: 1.3rem;
-	  }
-	  
-	  #hero-img span {
-		  font-size: 2.3rem;
-	  }
-		  
-	  #hero-img .col-1-3  {
-		  padding-left: 0;
-	  }
-	  
-	 
+  #hero-img .col-1-3  {
+	  padding-left: 0;
+  }
 	  
 /*--------------------------------------------------------------
 1.2 - Body Copy
 -------------------------------------------------------------- */
 
+  #hero-img p:first-of-type {
+	  font-size: 1.5rem;
+	  font-weight: 300;
+	  letter-spacing: .2rem;
+	  margin: 0 auto;
+  }
 	
-	  
-	#hero-img p:first-of-type {
-		font-size: 1.5rem;
-		font-weight: 300;
-		letter-spacing: .2rem;
-		margin: 0 auto;
-	}
-	  
-	#hero-img p:nth-of-type(2) {
-		font-size: 5rem;
-		margin-bottom: 0;
-		margin-top: -20px;
-	}
-	  
-	#hero-img p:nth-of-type(3) {
-		line-height: .25rem;
-		font-size: 1.5rem;
-	}
+  #hero-img p:nth-of-type(2) {
+	  font-size: 5rem;
+	  margin-bottom: 0;
+	  margin-top: -20px;
+  }
+	
+  #hero-img p:nth-of-type(3) {
+	  line-height: .25rem;
+	  font-size: 1.5rem;
+  }
 
-	  
-	blockquote {
-	padding: 0;
-	margin: 0;
-	}
-	  
-	blockquote p {
-	font-size: 2rem;
-	line-height: 3.3rem;
-	letter-spacing: .2rem;
-	}
-	  
-	blockquote footer p {
-	font-size: 1.8rem;
-	letter-spacing: .1rem;
-	}
-	  
-	#newsletter p {
-	margin-right: 0;
-	}
-	  
-	  
-	footer p {
-	font-size: .8rem;
-	}
+	
+  blockquote {
+	  padding: 0;
+	  margin: 0;
+  }
+	
+  blockquote p {
+	  font-size: 2rem;
+	  line-height: 3.3rem;
+	  letter-spacing: .2rem;
+  }
+	
+  blockquote footer p {
+	  font-size: 1.8rem;
+	  letter-spacing: .1rem;
+  }
+	
+  #newsletter p {
+	  margin-right: 0;
+  }
+	
+	
+  footer p {
+	  font-size: .8rem;
+  }
 
 /*--------------------------------------------------------------
 1.3 - Buttons
 -------------------------------------------------------------- */  
 	 	
-	#newsletter a {
-	padding: 9px 20px;
-	float: right;
-	display: inline-block;
-	margin-right: 0;	
-	}
+  #newsletter a {
+	  padding: 9px 20px;
+	  float: right;
+	  display: inline-block;
+	  margin-right: 0;	
+  }
 	
-	#newsletter a:hover {
-	padding: 8px 19px;	
-	}
+  #newsletter a:hover {
+	  padding: 8px 19px;	
+  }
 	
 /*--------------------------------------------------------------
 1.4 - Forms
 -------------------------------------------------------------- */
 
-	footer li {
-	display: block;
-	text-align: left;
-	margin-bottom: 8px;
-	}	
-	
-	#newsletter input {
-	width: 80%;
-	height: 50px;
-	float: left;
-	}	
-	
-	#newsletter form {
-	margin-right: 0;
-	margin-top: 0;
-	padding-bottom: 20px;
-	} 
+  footer li {
+	  display: block;
+	  text-align: left;
+	  margin-bottom: 8px;
+  }	
+  
+  #newsletter input {
+	  width: 80%;
+	  height: 50px;
+	  float: left;
+  }	
+  
+  #newsletter form {
+	  margin-right: 0;
+	  margin-top: 0;
+	  padding-bottom: 20px;
+  } 
 	
 /*--------------------------------------------------------------
 2.0 - Navigation Menus
@@ -771,70 +780,70 @@ footer .row .col-1-3:last-of-type {
 2.1 - Main Menu
 -------------------------------------------------------------- */
 
-	nav li {
+  nav li {
 	  font-size: 1.2rem;
 	  padding-right: 20px;
-	}
-	
-	nav a:hover {
+  }
+  
+  nav a:hover {
 	  border-bottom: 2px solid #FFF;
 	  padding-bottom: 5px;
-	}
-	
-	nav a:active {
+  }
+  
+  nav a:active {
 	  color: #C5D8D8;
 	  border-bottom: 2px solid #C5D8D8;
-	}
+  }
 
 /*--------------------------------------------------------------
 3.1 - Single Column
 -------------------------------------------------------------- */
 
-	 #hero-img .col-1-3 {
-	width: 100%;
-	  }
-	  
-  	.col-1-2, .col-1-3 {
-	 width: 100%;
-  	}
-	
-	footer .col-1-3 {
-	width: 50%;
-	}
+  #hero-img .col-1-3 {
+	  width: 100%;
+  }
+  
+  .col-1-2, .col-1-3 {
+	  width: 100%;
+  }
+  
+  footer .col-1-3 {
+	  width: 50%;
+  }
 	
 	
 /*--------------------------------------------------------------
 3.2 - Partial Columns
 -------------------------------------------------------------- */
-	#newsletter .col-2-3 {
-	width: 100%;
-	}
+  #newsletter .col-2-3 {
+	  width: 100%;
+  }
 	
 	
 /*--------------------------------------------------------------
 3.0 - SITE STRUCTURE
 -------------------------------------------------------------- */
 
-	#about .about-img:last-child {
-	display: none;
-	}
-	
-	 #white-transparent {
-	padding: 60px 20px;
-	}
-	  
-	#newsletter {
-	padding: 10px 0 100px;
-	}
-	
-	#footer-nav {
-	margin-right: -40px;
-	width: 15%;
-	}
-	
-	#map {
-	width: 100%;
-	}
+  #about .about-img:last-child {
+	  display: none;
+  }
+  
+  #white-transparent {
+	  padding: 60px 20px;
+  }
+  
+  #newsletter {
+	  padding: 10px 0 100px;
+  }
+  
+  #footer-nav {
+	  margin-right: -40px;
+	  width: 15%;
+	  }
+  
+  #map {
+	  width: 100%;
+  }
 	
 /*--------------------------------------------------------------
 6.0 - Flex
@@ -843,38 +852,38 @@ footer .row .col-1-3:last-of-type {
   .flex {
 	-moz-flex-direction: column;
 	-o-flex-direction: column;
-    -webkit-flex-direction: column;
-    -ms-flex-direction: column;
-    flex-direction: column;
+	-webkit-flex-direction: column;
+	-ms-flex-direction: column;
+	flex-direction: column;
 	display: flex;
 	-webkit-display: flex;
 	overflow: hidden;
 	margin-bottom: 20px;
-	}
+  }
   
   
   .flex .col-1-2:first-child {
 	-webkit-box-ordinal-group: 2;
-    -moz-box-ordinal-group: 2;
+	-moz-box-ordinal-group: 2;
 	-ms-box-ordinal-group: 2;
 	-o-box-ordinal-group: 2;
-    -ms-flex-order: 2;
-    -moz-order: 2;
+	-ms-flex-order: 2;
+	-moz-order: 2;
 	-o-order: 2;
 	-webkit-order: 2;
-    order: 2;
-	 }
-	 
-	 .flex .col-1-2:last-child {
+	order: 2;
+  }
+  
+  .flex .col-1-2:last-child {
 	-webkit-box-ordinal-group: 1;
-    -moz-box-ordinal-group: 1;
+	-moz-box-ordinal-group: 1;
 	-ms-box-ordinal-group: 1;
 	-o-box-ordinal-group: 1;
-    -ms-flex-order: 1;
-    -webkit-order: 1;
+	-ms-flex-order: 1;
+	-webkit-order: 1;
 	-moz-order: 1;
 	-o-order: 1;
-    order: 1;
-	}
+	order: 1;
+  }
 
 }
