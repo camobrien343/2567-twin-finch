@@ -319,7 +319,7 @@ section {
 }
 
 #products .row {
-	margin: 20px;
+	margin: 20px 0;
 }
 
 .col-1-6.center-block img {
@@ -395,12 +395,12 @@ footer {
 	padding: 20px 80px;
 }
 
-#products .col-1-3 {
+#other-roasts sections {
 	margin-right: 40px;
 }
 
 
-#products .col-1-3:last-child {
+#other-roasts section:last-child {
 	margin-right: 0;
 }
 
