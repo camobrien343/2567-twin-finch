@@ -52,8 +52,6 @@ h2 {
 }
 
 h3 {
-	font-size: 2rem;
-	font-weight: 300;
 	letter-spacing: .2rem;
 }
 
@@ -64,15 +62,13 @@ h3 {
 h4 {
 	font-size: 1.5rem;
 	font-weight: 400;
-	letter-spacing: .2rem;
-}
-	
-.lt-blue-bg.txt-center.p-b-lg h4 {
-	background-color: #000;
-	margin: 0 150px;
-	padding: 10px 30px;
 }
 
+.p-b-lg.lt-blue-bg h4 {
+	background-color: #000;
+	padding: 10px 80px;
+}
+	
 /*--------------------------------------------------------------
 1.2 - Body Copy
 -------------------------------------------------------------- */
@@ -82,71 +78,75 @@ h4 {
 	vertical-align: text-top;
 }
 
-#hero-img p:first-of-type {
-	font-size: 2rem;
+#hero-img p:first-of-type, blockquote footer p, #products p, h3 {
 	font-weight: 300;
+}
+
+#hero-img p:first-of-type {
 	letter-spacing: .12rem;
 }
 
-#hero-img p:nth-of-type(2) {
-	font-size: 7rem;
-	font-weight: 700;
+#hero-img p:first-of-type, #newsletter span, h3 {
+	font-size: 2rem;
+}
+
+#hero-img p:nth-of-type(2), #hero-img p:nth-of-type(3) {
 	margin-bottom: 0;
+}
+
+#hero-img p:nth-of-type(2) {
 	border-bottom: 5px solid #000;
+	font-size: 7rem;
 	margin-top: -30px;
 }
 
 #hero-img p:nth-of-type(3) {
-	font-weight: 700;
-	margin-bottom: 0;
-	line-height: 0rem;
 	font-size: 1.9rem;
+	line-height: 0rem;
 }
 
 blockquote {
 	padding: 0 100px;
 }
 
+#products a:active, #contact form a:active, blockquote p, .white-products-bg {
+	background-color: #FFF;
+}
+
 blockquote p {
 	font: 700 2.8rem/4.4rem 'Playfair Display', serif;
 	letter-spacing: .3rem;
-	background-color: #FFF;
 }
 
 blockquote footer p {
 	font-size: 2.2rem;
-	font-weight: 300;
-	letter-spacing: .2rem;
 	margin-top: -40px;
+}
+
+blockquote footer p, #products p.txt-center.txt-uppercase, h4 {
+	letter-spacing: .2rem;
 }
 
 h2 + p:first-child {
 	padding: 0 100px;
 }
 
-#products p {
-	font-weight: 300;
-}
-
 footer p {
 	display: inline-block;
-	text-align: right;
 	font-size: 1rem;
+	text-align: right;
 }
 
 footer img {
 	margin-left: 30px;
 }
 
-#newsletter span {
-	font-size: 2rem;
+#newsletter span, #products p.txt-center.txt-uppercase, #hero-img p:nth-of-type(2), #hero-img p:nth-of-type(3) {
 	font-weight: 700;
 }
 
 #products p.txt-center.txt-uppercase {
 	font-size: 1.2rem;
-	font-weight: 700;
-	letter-spacing: .2rem;
 }
 
 #newsletter p {
@@ -155,7 +155,6 @@ footer img {
 
 address {
 	font-style: normal;
-	display: inline;
 }
 
 /*--------------------------------------------------------------
@@ -182,37 +181,35 @@ a {
 
 #products a:hover, #contact form a:hover {
 	background-color: #A6A8AB;
-	color: #FFF;
 }
 
 #products a:active, #contact form a:active {
-	background-color: #FFF;
 	border: 1px solid #231F20;
 	color: #231F20;
 }
 
 #hero-img a[href="#products"] {
 	border: 1px solid #231F20;
-	color: #231F20;
 	padding: 10px 30px;
 }
 
 #hero-img a[href="#products"]:hover {
-	background-color: #A6A8AB;
+	background-color: rgba(166, 168, 171, 0.5);
 	border: 1px solid #231F20;
+}
+
+#hero-img a[href="#products"]:hover, #newsletter a, #hero-img a[href="#products"] {
 	color: #231F20;
 }
 
 #newsletter a {
 	background-color: #A6A8AB;
-	color: #231F20;
 	margin: 0 10px 0 -20px;
 	padding: 9px 75px;
 }
 
-#newsletter a:hover {
+#newsletter a:hover, #hero-img a[href="#products"]:active {
 	background-color: #231F20;
-	color: #FFF;
 	border: 1px solid #FFF;
 }
 
@@ -272,14 +269,14 @@ nav ul {
 }
 
 nav li {
-	margin-right: 40px;
+	padding-right: 40px;
 }
 
 nav li:last-child {
 	margin-right: 0;
 }
 
-nav a {
+nav a, #newsletter a:hover, #hero-img a[href="#products"]:active, #products a:hover, #contact form a:hover {
 	color: #FFF;
 }
 
@@ -288,8 +285,8 @@ nav a:hover {
 }
 
 nav a:active {
-	color: #C5D8D8;
 	border-bottom: 2px solid #C5D8D8;
+	color: #C5D8D8;
 }
 
 /*--------------------------------------------------------------
@@ -300,10 +297,6 @@ nav a:active {
 	-webkit-box-sizing: border-box;
 	-moz-box-sizing: border;
 	box-sizing: border-box;
-}
-
-#newsletter p:last-of-type {
-	display: inline;
 }
 
 .wrapper, figure, #hero-img p:first-of-type, .center-block, #hero-img .col-1-3 {
@@ -350,9 +343,9 @@ section {
 }
 
 #map {
-	width: 85%;
 	height: 200px;
 	margin-right: 70px;
+	width: 85%;
 }
 
 figure {
@@ -372,11 +365,11 @@ figure {
 	display: inline-block;
 }
 
-nav li, #sprites li {
+nav li, #sprites li, address, #newsletter p:last-of-type, .p-b-lg.lt-blue-bg h4 {
 	display: inline;
 }
 
-.col-1-6.center-block img, #contact label, #contact input, .lt-blue-bg.txt-center.p-b-lg h4, #newsletter p, h1 {
+.col-1-6.center-block img, #contact label, #contact input, #newsletter p, h1 {
 	display: block;
 }
 
@@ -413,7 +406,6 @@ footer {
 }
 
 .white-products-bg {
-	background-color: #FFF;
 	padding: 20px 0;
 }
 
@@ -428,6 +420,7 @@ footer {
 /*--------------------------------------------------------------
 3.1 - SINGLE COLUMNS
 -------------------------------------------------------------- */
+
 .col-1 {
 	width: 100%;
 }
@@ -466,14 +459,15 @@ footer {
 
 #hero-img {
 	background: url(../img/img-hero.jpg);
+	background-position: 0 30%;
 	-webkit-background-size: cover;
 	-ms-background-size: cover;
 	-o-background-size: cover;
 	-moz-background-size: cover;
 	background-size: cover;
 	background-attachment:fixed;
-	margin-top: 0;
 	background-repeat: no-repeat;
+	margin-top: 0;
 	padding: 150px 0;
 }
 
@@ -559,12 +553,15 @@ footer {
 .p-b-lg {
 	padding-bottom: 50px;
 }
+
 .p-b-xl {
 	padding-bottom: 100px;
 }
+
 .m-t-0 {
 	margin-top: 0;
 }
+
 .m-t-md {
 	margin-top: 20px;
 }
@@ -607,10 +604,10 @@ footer {
 }
 	
 .about-info {
+	align-content:center;
 	display: flex;
+	flex-direction:column;
     justify-content:center;
-    align-content:center;
-    flex-direction:column;
 }
 
 @media screen and (max-width: 480px) {
@@ -641,12 +638,6 @@ footer {
 	h4 {
 	  font-size: 1.2rem;
 	  letter-spacing: .2rem;
-  }
-  
-  .lt-blue-bg.txt-center.p-b-lg h4 {
-	  background-color: #000;
-	  margin: 0 10px;
-	  padding: 10px 30px;
   }
 
   #hero-img p {
@@ -712,7 +703,7 @@ footer {
   }
   
   #contact .col-4-6 {
-	padding: 0;
+	  padding: 0;
 }
 	
   footer p {
@@ -772,8 +763,8 @@ footer {
 -------------------------------------------------------------- */
 
   nav li {
-	  font-size: 1.1rem;
-	  padding-right: 20px;
+	  font-size: .85rem;
+	  padding-right: 10px;
   }
   
 /*--------------------------------------------------------------
@@ -791,7 +782,6 @@ footer {
   footer .col-1-3 {
 	  width: 50%;
   }
-	
 	
 /*--------------------------------------------------------------
 3.2 - Partial Columns
@@ -816,12 +806,13 @@ footer {
 	  padding: 10px 0 100px;
   }
   
-  #footer-nav {
+  footer nav {
 	  margin-right: -40px;
 	  width: 15%;
   }
   
   #map {
+	  margin-top: 50px;
 	  width: 100%;
   }
   
@@ -877,5 +868,10 @@ footer {
 	-o-order: 1;
 	order: 1;
   }
+  
+  #contact .row {
+	 display: flex;
+	 flex-direction: column-reverse;
+	}
 
 }
