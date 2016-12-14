@@ -12,7 +12,6 @@
 	var mapCanvas = document.getElementById('map');
 	var mapOptions = {
 	  center: new google.maps.LatLng(45.5231, -122.6765),
-	  
 	  zoom: 12,
 	  mapTypeId: google.maps.MapTypeId.ROADMAP,
 	  scrollwheel:  false
@@ -70,9 +69,9 @@
 <section class="p-b-lg" id="products"><!-- Introductory Products Content -->
 	<div class="drk-gry-bg">
     	<div class="wrapper">
-      		<header>
-      			<h2 class="white-txt">Products</h2>
-           		<p class="col-4-6 center-block white-txt p-b-lg">Twin Finch Roastery is an authentic micro-roastery; small, dedicated, and highly focused on quality. We have a constantly evolving, hand picked selection of fine coffee origins and delicious blends engineered to help you brew a cafe-quality cup at home.</p>
+      		<header class="white-txt">
+      			<h2>Products</h2>
+           		<p class="col-4-6 center-block p-b-lg">Twin Finch Roastery is an authentic micro-roastery; small, dedicated, and highly focused on quality. We have a constantly evolving, hand picked selection of fine coffee origins and delicious blends engineered to help you brew a cafe-quality cup at home.</p>
       		</header>
     	</div>
   	</div>
@@ -85,7 +84,7 @@
           		
               <section class="col-1-2 lt-blue-bg"><!-- Sunrise -->
                   <div class="white-products-bg">
-                    <img src="img/img-product-sunrise.jpg" alt=""> 
+                    <img src="img/img-product-sunrise.jpg" alt="Sunrise Blend"> 
                     <p>Roast: <b>Light</b>  |  <b>Origin: La Chiapas, Mexico</b></p>
                     <p>1lb <b>$17.95</b></p>
                     <header>
@@ -98,7 +97,7 @@
         
               <section class="col-1-2 lt-blue-bg"><!-- Finch House Blend -->
                   <div class="white-products-bg">
-                    <img src="img/img-product-house-blend.jpg" alt=""> 
+                    <img src="img/img-product-house-blend.jpg" alt="Finch House Blend"> 
                     <p>Roast: <b>Medium</b>  |  Origin: <b>Cajamarca &amp; Moyobamba Regions, Peru</b></p>
                     <p>1lb $17.95</p>
                     <header>
@@ -115,10 +114,10 @@
           <header>
               <h3>Our Other Roasts</h3>
           </header>
-              <div class="row flex2">
+              <div class="row flex">
   
                   <section class="col-1-3 eh-col"><!-- Evening Oak -->
-                      <img src="img/img-product-evening-oak.jpg" alt=""> 
+                      <img src="img/img-product-evening-oak.jpg" alt="Evening Oak"> 
                       <p>Roast: <b>Medium-Dark</b>  |  Origin: <b>Eastern Java, Indonesia</b></p>
                       <p>1lb $19.95</p>
                       <header>
@@ -129,7 +128,7 @@
                   </section>
               
                   <section class="col-1-3 eh-col"><!-- Midnight -->
-                      <img src="img/img-product-midnight.jpg" alt=""> 
+                      <img src="img/img-product-midnight.jpg" alt="Midnight"> 
                       <p>Roast: <b>Dark</b>  |  Origin: <b>Latin America</b></p>
                       <p>1lb $17.95</p>
                       <header>
@@ -140,7 +139,7 @@
                   </section>
               
                 <section class="col-1-3 eh-col"><!-- Espresso -->
-                  <img src="img/img-product-espresso.jpg" alt=""> 
+                  <img src="img/img-product-espresso.jpg" alt="Espresso"> 
                   <p>Origin: <b>Latin America, Africa, Indonesia</b></p>
                   <p>1lb $19.95</p>
                   <header>
@@ -162,19 +161,19 @@
   	<h2>About Us</h2>
   </header>
   <div class="row flex">
-    <figure class="col-1-2 about-img">
-        <img src="img/img-about-coffee-beans.jpg" alt="">
-    </figure> 
-    <div class="col-1-2 about-info">
+    <div class="col-1-2">
       <p>Our coffee is roasted in a hot air, refractory
         lined roaster with an extraordinary level of
         control. The significance of relying on a high
         volume of hot air to roast coffee beans can't
         be understated.</p>
     </div>
+     <figure class="col-1-2">
+        <img src="img/img-about-coffee-beans.jpg" alt="">
+    </figure>
   </div>
   <div class="row flex">
-    <div class="col-1-2 about-info">
+    <div class="col-1-2">
       <p>Most small coffee roasters use a single stage
         burner which offers virtually no control during
         the roasting process. The refractory significantly
@@ -204,32 +203,32 @@
 
 <!-- Contact Section -->
 
-<section id="contact" class="wrapper p-b-lg txt-center">
+<section id="contact" class="wrapper p-b-lg">
   <header>
       <h2>Contact Us</h2>
       
       <ul id="sprites">
     	<li><a href="http://www.facebook.com" target="_blank"></a></li>
     	<li><a href="http://www.twitter.com" target="_blank"></a></li>
-    	<li><a href="https://plus.google.com/" target="_blank"></a></li>
+    	<li><a href="https://plus.google.com" target="_blank"></a></li>
   	  </ul>
-      <div class="col-4-6 center-block txt-center">
+      <div class="col-4-6 center-block">
       	<p>Online orders usually ship quickly and arrive within three business days. We only ship the freshest coffee and your satisfaction is guaranteed. Our rotating, featured coffees are roasted on a more limited basis and your order may be held until the next time a batch hits the roaster. We only ship whole bean, but will grind for you in-store per request.</p>
       </div>
   </header>
   <div class="row">
       <div class="col-1-2">
-        <div id="map" class="center-block"></div>
+        <div id="map"></div>
         <p>You can buy from us directly at our Portland storefront located at 457 NW Market Street</p>
       </div>
       <form class="col-1-2">
-        <label for="fname" class="txt-lft">Name</label>
-        <input type="text" name="first-name" id="fname">
-        <label for="email-address" class="txt-lft">Email</label>
+        <label for="name">Name</label>
+        <input type="text" name="name" id="name">
+        <label for="email-address">Email</label>
         <input type="email" name="email-address" id="email-address">
-        <p class="bold txt-lft">Message</p>
+        <p class="bold">Message</p>
         <textarea rows="5" cols="55"></textarea>
-        <p><a href="#" class="push-right btn">Submit</a></p>
+        <p><a href="#" class="btn">Submit</a></p>
       </form>
  </div>
  
