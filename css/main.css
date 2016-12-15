@@ -12,10 +12,10 @@
 	1.5 - Lists
 	1.6 - Tables
 2.0 - Navigation Menus
-	3.1 - Main Menu
-	3.2 - Sub Menu
-	3.3 - Footer Menu
-3.0 - Content
+	2.1 - Main Menu
+	2.2 - Sub Menu
+	2.3 - Footer Menu
+3.0 - Site Structure
 	3.1 - Single Column
 	3.2 - Partial Columns
 4.0 - Media
@@ -47,8 +47,11 @@ h1 {
 h2 {
 	border-bottom: 2px solid #000;
 	font-size: 3rem;
-	font-weight: 400;
 	letter-spacing: .7rem;
+}
+
+h2, h4 {
+	font-weight: 400;
 }
 
 h3 {
@@ -61,7 +64,6 @@ h3 {
 	
 h4 {
 	font-size: 1.5rem;
-	font-weight: 400;
 }
 
 .p-b-lg.lt-blue-bg h4 {
@@ -140,10 +142,6 @@ footer p, #contact p:nth-child(7) {
 	text-align: right;
 }
 
-footer img {
-	margin-left: 30px;
-}
-
 #newsletter span, #products p.txt-center.txt-uppercase, #hero-img p:nth-of-type(2), #hero-img p:nth-of-type(3) {
 	font-weight: 700;
 }
@@ -170,12 +168,16 @@ a {
 	text-decoration: none;
 }
 
-#hero-img .txt-lft.p-b-lg a:hover, #products a[href="_blank"]:hover {
+#hero-img .txt-lft.p-b-lg a:hover, #white-transparent p.p-b-lg a:hover {
 	color: #A6A8AB;
 }
 
-#hero-img a:visited, #products #products a[href="_blank"] {
+#hero-img a:visited, #products #products a[href="_blank"], a {
 	color: #000;
+}
+
+nav a, #newsletter a:hover, #hero-img a[href="#products"]:active, #products a:hover, #contact form a:hover, #hero-img a[href="#products"]:active {
+	color: #fff;
 }
 
 #products a:hover, #contact form a:hover {
@@ -183,22 +185,28 @@ a {
 }
 
 #products a:active, #contact form a:active {
-	border: 1px solid #231F20;
 	color: #231F20;
+	background-color: #fff;
 }
 
 #hero-img a[href="#products"] {
-	border: 1px solid #231F20;
 	padding: 10px 30px;
 }
 
 #hero-img a[href="#products"]:hover {
 	background-color: rgba(166, 168, 171, 0.5);
+}
+
+#hero-img a[href="#products"]:hover, #hero-img a[href="#products"], #products a:active, #contact form a:active  {
 	border: 1px solid #231F20;
 }
 
-#hero-img a[href="#products"]:hover, #newsletter a, #hero-img a[href="#products"] {
+#newsletter a, #hero-img a[href="#products"] {
 	color: #231F20;
+}
+
+#hero-img a[href="#products"]:active {
+	color: #fff;
 }
 
 #newsletter a {
@@ -275,9 +283,7 @@ nav li:last-child {
 	padding-right: 0;
 }
 
-nav a, #newsletter a:hover, #hero-img a[href="#products"]:active, #products a:hover, #contact form a:hover {
-	color: #fff;
-}
+
 
 nav a:hover {
 	border-bottom: 2px solid #fff;
@@ -353,7 +359,7 @@ figure {
 
 #white-transparent {
 	background-color: rgba(255, 255, 255, 0.5);
-	padding: 60px 60px;
+	padding: 60px;
 }
 
 #newsletter p, #sprites li:first-child a, #sprites li:nth-child(2) a, #sprites li:last-child a, #hero-img span, #hero-img p:nth-of-type(2), #hero-img p:nth-of-type(3), #hero-img p, h2, #newsletter a {
@@ -506,15 +512,15 @@ footer, .white-products-bg {
 /*--------------------------------------------------------------
 5.3 - TEXT UTILITY
 -------------------------------------------------------------- */
-.txt-uppercase, h2, h3, h4, label, form p {
+.txt-uppercase, h2, h3, h4, label, form p, .btn, nav {
 	text-transform:uppercase;
 }
 
-.txt-center, h1, h2, h3, #hero-img .col-1-3, blockquote, #products, #about header, #contact header, #sprites, #map + p {
+.txt-center, h1, h2, h3, #hero-img .col-1-3, blockquote, #products, #about header, #contact header, #sprites, #map + p, #home nav {
 	text-align: center;
 }
 
-.txt-lft, input+p, label {
+.txt-lft, input+p, label, #white-transparent p:first-child {
 	text-align: left;
 }
 
@@ -634,19 +640,6 @@ footer, .white-products-bg {
   .p-b-lg.lt-blue-bg h4 {
 	  padding: 10px 2px;
   }
-
-  #hero-img p {
-	  font-size: 1.4rem;
-	  letter-spacing: .1rem;
-  }
-
-  #hero-img p:nth-of-type(2) {
-	  font-size: 3.5rem;
-  }
-   
-  #hero-img .col-1-3  {
-	  padding-left: 0;
-  }
 	  
 /*--------------------------------------------------------------
 1.2 - Body Copy
@@ -658,19 +651,28 @@ footer, .white-products-bg {
 	
   #hero-img p:nth-of-type(2) {
 	  font-size: 5rem;
-	  margin: -20px 0 0 0;
+	  margin-top: -20px;
   }
 	
   #hero-img p:nth-of-type(3) {
+	  font-size: 1rem;
 	  line-height: .25rem;
   }
   
-  #hero-img p:first-of-type, #hero-img p:nth-of-type(3), blockquote p {
+   #hero-img p {
+	  letter-spacing: .1rem;
+  }
+  
+  #hero-img p, blockquote footer p {
+	  font-size: 1.4rem;
+  }
+
+  #hero-img p:first-of-type, blockquote p {
 	  font-size: 1.5rem;
   }
   
-  blockquote {
-	  padding: 0;
+  #hero-img p:nth-of-type(3) {
+	  font-size: 1.35rem;
   }
   
   blockquote, #newsletter form {
@@ -679,10 +681,6 @@ footer, .white-products-bg {
 	
   blockquote p {
 	  line-height: 2.7rem;
-  }
-	
-  blockquote footer p {
-	  font-size: 1.4rem;
   }
   
   blockquote p, blockquote footer p {
@@ -693,7 +691,7 @@ footer, .white-products-bg {
 	  margin-right: 0;
   }
 
-  #contact .col-4-6, .col-1-2.about-info:first-child, .col-1-2.about-info:last-child, #about .row:first-of-type p, #about .row:last-of-type p {
+  #contact .col-4-6, .col-1-2.about-info:first-child, .col-1-2.about-info:last-child, #about .row:first-of-type p, #about .row:last-of-type p, blockquote  {
 	  padding: 0;
   }
 	
@@ -705,17 +703,13 @@ footer, .white-products-bg {
   #about {
 	  text-align: center;
   }
-  
-  #hero-img {
-	  padding: 50px 0;
-  }
 
 /*--------------------------------------------------------------
 1.3 - Buttons
 -------------------------------------------------------------- */  
 	 	
   #newsletter a {
-	  padding: 12px 28px;
+	  padding: 12px 30px;
 	  float: right;
   }
 	
@@ -761,6 +755,15 @@ footer, .white-products-bg {
   }
   
 /*--------------------------------------------------------------
+2.3 - Footer Menu
+-------------------------------------------------------------- */  
+
+   footer nav {
+	  margin-right: -40px;
+	  width: 15%;
+  }
+  
+/*--------------------------------------------------------------
 3.1 - Single Column
 -------------------------------------------------------------- */
 
@@ -800,11 +803,6 @@ footer, .white-products-bg {
 	  padding: 10px 0 100px;
   }
   
-  footer nav {
-	  margin-right: -40px;
-	  width: 15%;
-  }
-  
   #map {
 	  margin-top: 50px;
 	  width: 100%;
@@ -814,12 +812,16 @@ footer, .white-products-bg {
 	  width: 90%;
   }
   
-   #contact .col-1-2:first-of-type  {
-	  padding-right: 0;
+   #hero-img .col-1-3  {
+	  padding-left: 0;
   }
-
-/*--------------------------------------------------------------
-4.0 - Media
--------------------------------------------------------------- */
+  
+   #hero-img {
+	  padding: 50px 0;
+  }
+  
+  #other-roasts .col-1-3, #contact .col-1-2:first-of-type {
+	padding-right: 0;
+  }
 
 }
